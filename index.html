@@ -2,9 +2,45 @@
     <head>
         <title>ZooPantanal</title>
         <meta charset="UTF-8">
+        
         <link rel="stylesheet" type="text/css" href="folhaEstilos.css">
+        
+
+                <!-- And the relevant JavaScript -->
+        <style>
+          .banner { float: left;
+            width: 300px; height: 300px; }
+          .banner li { list-style: none; }
+          .banner ul li { float: left; }
+        </style>
+
+      <script type="text/javascript">
+        
+        function slide1(){
+          img = document.querySelector("#banner");
+          img.src="imgs/rio.jpg";
+          setTimeout("slide2()", 1000);
+       }
+         
+        function slide2(){
+          img.src="imgs/rio1.jpg";
+          setTimeout("slide3()", 1000);
+        }
+         
+        function slide3(){
+          img.src="imgs/onca1.jpg";
+          setTimeout("slide1()", 1000);
+        }
+      
+
+     
+      </script>
     </head>
-    <body>
+
+    <body onload="slide1()">
+        
+        
+        
        <nav id="menu">
          <ul>
             <li><a href="#">HOME</a></li> |
@@ -17,7 +53,13 @@
             <input type="text" id=pesquisa" placeholder="Buscar animais...">
             <img src=imgs/"search3.png" id="btnBusca">
        </div>-->
+      
+
+
        <div id="container">
+          <img id = "banner" name="banner"/>
+          
+     
             <div id="containerMenu">
                 <p id="categoria">Categorias</p>
                 <p>Mamíferos</p>
@@ -26,5 +68,15 @@
                 <p>Peixes</p>
             </div>
        </div>
+ 
     </body>
-</hlml>
+</html>
+
+
+Preserve o Pantanal.
+
+<!-- The barebones HTML required for Unslider -->
+
+
+
+
