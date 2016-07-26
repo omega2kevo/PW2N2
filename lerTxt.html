@@ -1,0 +1,26 @@
+<script>	function getFile(e){		
+	var iframe = document.createElement("IFRAME");		
+	iframe.src = document.getElementById("file").value;				
+	iframe.id		   = "iframe"		iframe.style.width  = "100%";		
+	iframe.style.height = "300px";						
+	document.getElementById("area").appendChild(iframe);	
+}	window.onload = function(){ 		
+	document.getElementById('load').onclick	 = getFile;	
+}	</script>
+<html>	
+<head>		
+<title>Ler Arquivo TXT com Javascript</title>	
+</head>
+	<body>		
+		<div id="area">			
+			<p> <input type="file"	  
+				id="file"						
+				/> 
+			</p>			
+			<p> <input type="button"	
+				id="load"	
+				value="Carregar..." /> 
+			</p>		
+		</div>	
+	</body>
+	</html>
